@@ -1,7 +1,8 @@
 import java.util.Scanner;
 
-// SuperClass
+// SuperClass or Main Class
 class Animal {
+    // Attribute
     private String name;
     private int age;
     private String species;
@@ -17,27 +18,29 @@ class Animal {
 
 
     // method
-    public void makeSound(){
+        public void makeSound(){
         System.out.println("Animal sound");
     }
 
     public void showInfo(){
-        System.out.println("Name"+ name);
-        System.out.println("Age" + age);
-        System.out.println("Species" + species);
+        System.out.println("Name: "+ name);
+        System.out.println("Age: " + age);
+        System.out.println("Species: " + species);
     }
+
+    //getter
     public String getSpecies(){
         return species;
     }
-
+    //getter
     public String getName(){
         return name;
     }
-
+    //getter
     public int getAge(){
         return age;
     }
-
+    //setter NO RETURN
     public void setName(String name){
         this.name = name;
     }
@@ -48,14 +51,14 @@ class Animal {
 }
 
 //Sub class 
-
+//inheritance
 class Carnivore extends Animal {
-
+    //Attrivute True or False
     private boolean isHungry;
 
 
 
-    public Carnivore(String name, int age, String species, boolean isHungry){
+    public Carnivore (String name, int age, String species, boolean isHungry){
         super(name,age,species);
         this.isHungry = isHungry;
     }
@@ -90,12 +93,16 @@ public class ZooApp {
 
         for (int i = 0; i < carni.length; i++) {
             
+            System.out.print("Animal is Name: ");    
             String name = in.nextLine();
 
+            System.out.print("Animal is Age: ");   
             int age = Integer.parseInt(in.nextLine());
 
+            System.out.print("Animal is Species: ");
             String species = in.nextLine();
 
+            System.out.println("Animal is Hungry: ");
             boolean isHungry = Boolean.parseBoolean(in.nextLine());
 
 
@@ -119,3 +126,7 @@ public class ZooApp {
         in.close();
     }
 }
+
+
+
+
