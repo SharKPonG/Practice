@@ -80,7 +80,7 @@ class Carnivore extends Animal {
 
     public void showInfo(){
         super.showInfo();
-        System.out.println("Is hungry" + isHungry);
+        System.out.println(isHungry);
     }
 }
 
@@ -92,7 +92,7 @@ public class ZooApp {
         Carnivore[] carni = new Carnivore[3];
 
         for (int i = 0; i < carni.length; i++) {
-            
+
             System.out.print("Animal is Name: ");    
             String name = in.nextLine();
 
@@ -102,7 +102,7 @@ public class ZooApp {
             System.out.print("Animal is Species: ");
             String species = in.nextLine();
 
-            System.out.println("Animal is Hungry: ");
+            System.out.print("Animal is Hungry: ");
             boolean isHungry = Boolean.parseBoolean(in.nextLine());
 
 
@@ -117,9 +117,11 @@ public class ZooApp {
 
 
         System.out.println("=== Animal Information ===");
+        // object
         for (Carnivore car : carni){
             car.showInfo();
             car.hunt();
+            car.makeSound();
         }
 
 
